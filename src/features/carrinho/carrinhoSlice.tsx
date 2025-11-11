@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { Produto } from './../../types/produto'
 
 type CarrinhoState = {
-  itens: Produto[],
+  itens: Produto[]
   favs: Produto[]
 }
 

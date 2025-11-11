@@ -13,16 +13,13 @@ function App() {
       .then((res) => res.json())
       .then((res) => setProdutos(res))
   }, [])
-  
 
   return (
     <>
       <GlobalStyle />
       <div className="container">
         <Header />
-        <Produtos
-          produtos={produtos}
-        />
+        <Produtos produtos={produtos} />
       </div>
     </>
   )

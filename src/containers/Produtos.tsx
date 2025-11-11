@@ -7,17 +7,12 @@ type Props = {
   produtos: ProdutoType[]
 }
 
-const ProdutosComponent = ({
-  produtos,
-}: Props) => {
+const ProdutosComponent = ({ produtos }: Props) => {
   return (
     <>
       <S.Produtos>
         {produtos.map((produto) => (
-          <Produto
-            key={produto.id}
-            produto={produto}
-          />
+          <Produto key={produto.id} produto={produto} />
         ))}
       </S.Produtos>
     </>

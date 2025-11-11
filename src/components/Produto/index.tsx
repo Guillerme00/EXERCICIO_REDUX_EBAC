@@ -23,26 +23,25 @@ const ProdutoComponent = ({ produto }: Props) => {
         <img src={produto.imagem} alt={produto.nome} />
       </S.Capa>
 
-
       <S.Titulo>{produto.nome}</S.Titulo>
 
       <S.Prices>
         <strong>{paraReal(produto.preco)}</strong>
       </S.Prices>
 
-
-      <S.BtnComprar onClick={() => dispatch(addFavorite(produto))} type="button">
-        {is_fav
-        ? '- Remover dos favoritos'
-        : '+ Adicionar aos favoritos'}
+      <S.BtnComprar
+        onClick={() => dispatch(addFavorite(produto))}
+        type="button"
+      >
+        {is_fav ? '- Remover dos favoritos' : '+ Adicionar aos favoritos'}
       </S.BtnComprar>
 
-
-      <S.BtnComprar onClick={() => dispatch(addCarrinho(produto))} type="button">
+      <S.BtnComprar
+        onClick={() => dispatch(addCarrinho(produto))}
+        type="button"
+      >
         Adicionar ao carrinho
       </S.BtnComprar>
-
-
     </S.Produto>
   )
 }
